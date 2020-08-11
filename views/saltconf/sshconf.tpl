@@ -235,6 +235,7 @@ $(function(){
         $('#modalTitle').html('新增计划任务');
         $('#hidInput').val('0');
         $('#myModal').modal('show');
+        document.getElementById("hostaddr").readOnly=false;
         $('#modalForm')[0].reset();
         isEdit = 0;
     });
@@ -270,6 +271,7 @@ $(function(){
                 $('#modalTitle').html('主机更新');     //头部修改
                 $('#hidInput').val('1');            //修改标志
                 $('#myModal').modal('show');
+                document.getElementById("hostaddr").readOnly=true;
                 editId = result[0]['id'];
 				isEdit = 1;
     		}

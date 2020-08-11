@@ -224,6 +224,7 @@ $(function(){
         $('#selecthd').selectpicker('val',['noneSelectedText']); //清除默认值
         $('#hidInput').val('0');
         $('#myModal').modal('show');
+        document.getElementById("hostname").readOnly=false;
         $('#modalForm')[0].reset();
         isEdit = 0;
     });
@@ -260,6 +261,7 @@ $(function(){
                 $('#hidInput').val('1');            //修改标志
                 $('#myModal').modal('show');
                 $('#selecthd').selectpicker('val',(result[0]['selecthd'])); //处理selecthd选择默认值
+                document.getElementById("hostname").readOnly=true;
                 editId = result[0]['id'];
 				isEdit = 1;
     		}

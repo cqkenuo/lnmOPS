@@ -237,6 +237,8 @@ $(function(){
         $('#modalTitle').html('新增软件信息');
         $('#hidInput').val('0');
         $('#myModal').modal('show');
+        document.getElementById("softnumber").readOnly=false;
+        document.getElementById("softname").readOnly=false;
         $('#modalForm')[0].reset();
         isEdit = 0;
     });
@@ -274,6 +276,8 @@ $(function(){
                 $('#modalTitle').html('软件更新');     //头部修改
                 $('#hidInput').val('1');            //修改标志
                 $('#myModal').modal('show');
+                document.getElementById("softnumber").readOnly=true;
+                document.getElementById("softname").readOnly=true;
                 editId = result[0]['id'];
 				isEdit = 1;
     		}

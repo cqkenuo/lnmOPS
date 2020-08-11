@@ -189,6 +189,7 @@ $(function(){
         $('#grptasks').selectpicker('val',['noneSelectedText']); //清除默认值
         $('#hidInput').val('0');
         $('#myModal').modal('show');
+        document.getElementById("grpname").readOnly=false;
         $('#modalForm')[0].reset();
         isEdit = 0;
     });
@@ -225,6 +226,7 @@ $(function(){
                 var arr = result[0]['grptasks'].split(',');
                 //console.log(arr)
                 $('#grptasks').selectpicker('val',arr); //处理grptasks选择默认值
+                document.getElementById("grpname").readOnly=true;
                 editId = result[0]['id'];
 				isEdit = 1;
     		}
